@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaVienRose</title>
+    <link rel="stylesheet" href="only.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header_logo">
+            <a class="header_logo" href="index.html"><img class="header_logo_img" src="img/Логотип.png"> 
+        </div>
+        <div class="header_nav" id="headerNav">
+          <a href="svadebniy.html" class="header_nav_a">Свадебные</a>
+          <a href="vecherni.html" class="header_nav_a">Вечерние</a>
+          <a href="sale.html" class="header_nav_a">SALE!</a>
+          <a href="only.html" class="header_nav_a1">Онлайн-запись</a>
+        </div>
+        <div class="header_account">
+          <a href="korzina.html" class="header_account_a">Моя примерочная</a>
+          <a href="account.html" class="header_icon"></a>
+        </div>
+        <div class="header_hamburger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>          
+      </div>
+
+      <form method="post" action="only.php" accept-charset="UTF-8">
+      <div class="pink">
+        <p class="pink_text">Оставьте свой номер телефона и мы перезвоним вам!</p>
+        <div class="pink_dropdowns">
+          <div class="inputs">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="text" name="surname" placeholder="Фамилия">
+            <input type="text" name="phone" placeholder="Телефон">
+          </div>
+          <div class="dropdowns">
+            <select name="dress_type">
+              <option>Вид платья</option>
+              <option>А-силуэт</option>
+              <option>Прямое</option>
+            </select>
+            <input type="date" name="date">
+          </div>
+        </div>
+        <button type="submit" class="pink_button">Записаться</button>
+      </div>
+    </form>
+
+      <footer class="footer">
+        <div class="footer_socials">
+            <a href="" class="footer_socials_link"><img src="img/вк.png"/></a>
+            <a href="" class="footer_socials_link"><img src="img/пинтерест.png"/></a>
+            <a href="" class="footer_socials_link"><img src="img/телеграмм.png"/></a>
+        </div>
+        <p class="footer_copyright">©LaVieenRose2024</p>
+    </footer>
+    <script src="svadebniy.js"></script>
+  </body>
+  </html>

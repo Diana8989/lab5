@@ -1,0 +1,463 @@
+@font-face {
+    font-family: "dance_partner_0";
+    src: url(dance_partner_0.ttf);
+  }
+  @font-face {
+      font-family: "Lighthaus";
+      src: url(Lighthaus.otf);
+    }
+  *{
+      text-decoration: none;
+      margin: 0px;
+  }
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 10px 0px;
+      font-family:'dance_partner_0';
+      &_logo {
+        margin-left: 25px;
+        &_img {
+            width: 150px; 
+          }
+      }
+      &_nav {
+        display: flex;
+        justify-content: flex-start;
+        margin-right:400px ;
+        &_a {
+            margin-right: 20px;
+            font-size: 20px;
+            color: #000000;
+            margin-top: 15px;
+          }
+          &_a1 {
+            margin-right: 20px;
+            font-size: 20px;
+            color: #964B00;
+            margin-top: 15px;
+          }
+      }
+      &_hamburger-menu {
+        display: none; 
+        flex-direction: column;
+        justify-content: space-around;
+        height: 25px;
+        width: 35px;
+        cursor: pointer;
+        margin-right: 25px;
+        margin-top: 10px;
+      }
+      &_account {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+        &_a {
+            color: #964B00;
+            margin-right: 20px;
+            font-size: 20px;
+            margin-top: 15px;
+          }
+      }
+      &_icon {
+        width: 40px;
+        height: 40px;
+        background-image: url('img/Кабинет.png'); 
+        background-size: cover;
+        margin-left: 20px;
+      }
+  }
+
+  .header_hamburger-menu span {
+    display: block;
+    height: 3px;
+    background: #000;
+  }
+
+  .product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-left: 190px;
+    margin-top: 20px;
+    &_gallery {
+      display: flex;
+      flex-direction: row-reverse;
+      &_thumbnails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: auto;
+      }
+      &_thumbnails img {
+        width: 60px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+    &_image img {
+      width: 350px;
+    }
+  }
+
+  .description {
+    float: right;
+    width: 50%;
+    &_name {
+      margin-top: 20px;
+      font-family:'dance_partner_0';
+      font-weight: normal;
+    }
+    &_price {
+      font-family:'dance_partner_0';
+      color: #964B00;
+      margin-top: 15px; 
+      font-size: 18px;
+    }
+    &_button {
+      margin-top: 10px;
+      padding: 5px 70px; 
+      background-color: #DC8386; 
+      border: none;
+      border-radius: 10px;
+      font-family:'dance_partner_0';
+      font-size: 19px; 
+      color: rgb(0, 0, 0); 
+      cursor: pointer; 
+      transition: background-color 0.3s; 
+    }
+    
+    &_button:hover {
+      background-color: #ae818f;
+    }
+    &_title {
+      margin-top: 75px;
+      font-family:'dance_partner_0';
+      font-weight: normal;
+    }
+    &_text {
+      margin-top: 20px;
+      font-family:'dance_partner_0';
+      font-weight: normal;
+      margin-right: 380px;
+      font-size: 20px;
+    }
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D5BFB2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    width: 30%;
+    color: #000000;
+  }
+  
+  .popup h2 {
+    margin-left:30%;
+    font-family:'dance_partner_0';
+    font-size: 30px;
+    font-weight: normal;
+  }
+  
+  .form-group {
+    margin: 15px;
+    font-family:'dance_partner_0';
+    font-size: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #E4E4E4;
+    border-radius: 12px;
+    background-color: #E4E4E4;
+  }
+  
+  .form-group input[type="password"] {
+    position: relative;
+  }
+  
+  .form-group .show-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .button {
+    background-color: #E4E4E4;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    margin-left:32%;
+    margin-bottom: 15px;
+    font-family:'dance_partner_0';
+    font-size: 20px;
+  }
+
+  .down {
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-left:39%;
+    font-family:'dance_partner_0';
+    font-size: 15px;
+    color: #fff;
+  }
+
+
+  .popup2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D5BFB2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    width: 30%;
+    color: #000000;
+  }
+  
+  .popup2 h2 {
+    margin-left:40%;
+    font-family:'dance_partner_0';
+    font-size: 30px;
+    font-weight: normal;
+  }
+  
+  .form-group2 {
+    margin: 15px;
+    font-family:'dance_partner_0';
+    font-size: 20px;
+  }
+  
+  .form-group2 label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group2 input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #E4E4E4;
+    border-radius: 12px;
+    background-color: #E4E4E4;
+  }
+  
+  .form-group2 input[type="password"] {
+    position: relative;
+  }
+  
+  .button2 {
+    background-color: #E4E4E4;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    margin-left: 40%;
+    margin-bottom: 15px;
+    font-family:'dance_partner_0';
+    font-size: 20px;
+  }
+  .down2 {
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 35%;
+    font-family:'dance_partner_0';
+    font-size: 15px;
+    color: #fff;
+  }
+
+  .footer { 
+    padding: 600px 10px 0px 570px;
+    &_socials_link {
+      padding-left: 30px;
+  }
+  &_copyright {
+    font-family: 'dance_partner_0';
+    font-size: 17px;
+    margin-left: 680px;
+}
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px; 
+    text-align: center;
+  }
+
+  .footer_socials {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px; 
+  }
+
+  .footer_socials_link {
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+
+  .footer_copyright {
+    font-size: 17px;
+    text-align: right;
+    margin: 0;
+    position: absolute;
+    right: 10px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: flex-start;
+  }
+  .header_logo {
+    flex: 1;
+  }
+  .header_nav {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    position: absolute;
+    top: 75px;
+    left: 567px;
+  }
+  .header_nav_a,
+  .header_nav_a1 {
+    margin-top: 10px;
+    margin-right: 0;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .header_hamburger-menu {
+    display: flex; 
+  }
+}
+
+@media (max-width: 768px) {
+  .product_gallery_thumbnails img {
+    width: 40px; 
+    margin-bottom: 5px; 
+  }
+
+  .product_image img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    float: none;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    clear: both; 
+  }
+
+  .description_name {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 50px;
+  }
+
+  .description_price {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 50px;
+  }
+
+  .description_title{
+    text-align: left; 
+    font-size: 20px;
+  }
+  .description_text {
+    text-align: left;
+    font-size: 18px; 
+    width: 100%;
+  }
+
+  .description_button {
+    padding: 5px 50px;
+    font-size: 16px; 
+    margin-left: 238px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup, .popup2 {
+    width: 70%;
+    padding: 10px; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+  }
+
+  .popup h2, .popup2 h2 {
+    margin: 0; 
+    font-size: 24px; 
+    text-align: center;
+  }
+
+  .form-group, .form-group2 {
+    margin: 10px 0;
+  }
+
+  .form-group label, .form-group2 label {
+    text-align: left;
+  }
+
+  .form-group input, .form-group2 input {
+    font-size: 16px;
+    width: 96%; 
+    margin: 0 auto;
+  }
+
+  .button, .button2 {
+    width: 70%; 
+    margin: 10px 80px; 
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: center; 
+  }
+
+  .down, .down2 {
+    display: block; 
+    width: auto; 
+    margin: 10px auto;
+    text-align: center; 
+    font-size: 14px; 
+  }
+}

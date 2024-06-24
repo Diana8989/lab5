@@ -1,0 +1,296 @@
+@font-face {
+    font-family: "dance_partner_0";
+    src: url(dance_partner_0.ttf);
+  }
+  @font-face {
+      font-family: "Lighthaus";
+      src: url(Lighthaus.otf);
+    }
+  *{
+      text-decoration: none;
+      margin: 0px;
+  }
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 10px 0px;
+      font-family:'dance_partner_0';
+      &_logo {
+        margin-left: 25px;
+        &_img {
+            width: 150px; 
+          }
+      }
+      &_nav {
+        display: flex;
+        justify-content: flex-start;
+        margin-right:400px ;
+        &_a {
+            margin-right: 20px;
+            font-size: 20px;
+            color: #000000;
+            margin-top: 15px;
+          }
+      }
+      &_hamburger-menu {
+        display: none; 
+        flex-direction: column;
+        justify-content: space-around;
+        height: 25px;
+        width: 35px;
+        cursor: pointer;
+        margin-right: 25px;
+        margin-top: 10px;
+      }
+      &_account {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+        &_a {
+            color: #964B00;
+            margin-right: 20px;
+            font-size: 20px;
+            margin-top: 15px;
+          }
+      }
+      &_icon {
+        width: 40px;
+        height: 40px;
+        background-image: url('img/Кабинет.png'); 
+        background-size: cover;
+        margin-left: 20px;
+      }
+  }
+
+  .header_hamburger-menu span {
+    display: block;
+    height: 3px;
+    background: #000;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+    &_image {
+        margin-right: 20px;
+        width: 300px;
+        margin-left: 150px;
+        margin-top: 30px;
+      }
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    &_name {
+        font-family:'dance_partner_0';
+        font-size: 19px;
+        margin-bottom: 270px;
+        margin-left: 60px;
+      }
+    &_price {
+        margin-right: 20px;
+        margin-left: 20px;
+        font-family:'dance_partner_0';
+        font-size: 19px;
+        margin-bottom: 270px;
+      }
+  }
+
+  .quantity-controls {
+    border: 1px solid black; 
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 270px;
+    font-family:'dance_partner_0';
+    font-size: 19px;
+  }
+  .quantity-controls button {
+    margin: 0 5px;
+    background-color: transparent; 
+    cursor: pointer;
+    border: none;
+    font-family:'dance_partner_0';
+    font-size: 19px;
+  }
+  .remove-item {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 270px;
+    cursor: pointer;
+    font-family:'dance_partner_0';
+    font-size: 19px;
+  }
+  .sum {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 270px;
+    font-family:'dance_partner_0';
+    font-size: 19px;
+  }
+
+  .cart {
+    margin-top: 50px;
+    margin-left: 148px;
+    width: 1200px;
+    &_summary-title {
+        font-size: 25px;
+        font-family:'dance_partner_0';
+        font-weight: normal;
+      }
+      
+    &_summary-text {
+        margin-top: 10px;
+        font-size: 20px;
+        font-family:'dance_partner_0';
+      }
+    
+    &_summary-text2 {
+        margin-top: 10px;
+        font-size: 20px;
+        font-family:'dance_partner_0';
+        text-decoration: underline; 
+        color: #000;
+      }
+    
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 100px 10px 0px 590px;
+    &_socials_link {
+      padding-left: 30px;
+  }
+  &_copyright {
+    font-family: 'dance_partner_0';
+    font-size: 17px;
+}
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; 
+    &__socials {
+      display: flex;
+      justify-content: center;
+      width: 100%; 
+      padding-bottom: 20px; 
+      &__link {
+        padding: 0 10px;
+        padding-top: 20px;
+      }
+    }
+    &_copyright {
+      align-self: flex-end;
+      padding-top: 20px;
+      width: 100%; 
+      text-align: right; 
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: flex-start;
+  }
+  .header_logo {
+    flex: 1;
+  }
+  .header_nav {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    position: absolute;
+    top: 75px;
+    left: 567px;
+  }
+  .header_nav_a,
+  .header_nav_a1 {
+    margin-top: 10px;
+    margin-right: 0;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .header_hamburger-menu {
+    display: flex; 
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 0 10px; 
+  }
+
+  .container_image {
+    width: 120px; 
+    margin: 30px 10px 0 10px; 
+  }
+
+  .details {
+    flex: 1;
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin: 0 10px; 
+  }
+
+  .details_name,
+  .details_price,
+  .quantity-controls,
+  .remove-item,
+  .sum {
+    margin: 0 5px; 
+    white-space: nowrap; 
+    font-size: 18px;
+  }
+
+  .quantity-controls button {
+    padding: 0 5px;
+  }
+
+  .remove-item {
+    font-size: 18px; 
+  }
+
+  .sum {
+    font-size: 18px; 
+  }
+  .cart {
+    margin-top: 60px;
+    margin-left: 0; 
+    width: auto; 
+    padding: 0 15px; 
+  }
+
+  .cart_summary-title {
+    font-size: 20px; 
+    margin-top: 15px;
+  }
+
+  .cart_summary-text,
+  .cart_summary-text2 {
+    font-size: 18px; 
+    margin-top: 10px; 
+  }
+
+  .cart_summary-text2 {
+    text-decoration: underline;
+  }
+}

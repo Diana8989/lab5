@@ -1,0 +1,203 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "dance_partner_0";
+  src: url(dance_partner_0.ttf);
+}
+@font-face {
+  font-family: "Lighthaus";
+  src: url(Lighthaus.otf);
+}
+* {
+  text-decoration: none;
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 0px;
+  font-family: "dance_partner_0";
+}
+.header_logo {
+  margin-left: 25px;
+}
+.header_logo_img {
+  width: 150px;
+}
+.header_nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 400px;
+}
+.header_nav_a {
+  margin-right: 20px;
+  font-size: 20px;
+  color: #000000;
+  margin-top: 15px;
+}
+.header_nav_a1 {
+  margin-right: 20px;
+  font-size: 20px;
+  color: #964B00;
+  margin-top: 15px;
+}
+.header_hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25px;
+  width: 35px;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+.header_account {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+.header_account_a {
+  color: #964B00;
+  margin-right: 20px;
+  font-size: 20px;
+  margin-top: 15px;
+}
+.header_icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("img/Кабинет.png");
+  background-size: cover;
+  margin-left: 20px;
+}
+
+.header_hamburger-menu span {
+  display: block;
+  height: 3px;
+  background: #000;
+}
+
+.pink {
+  background-color: #E6CACB;
+  padding: 90px;
+  text-align: center;
+}
+.pink_text {
+  margin-bottom: 5px;
+  font-family: "dance_partner_0";
+  font-size: 22px;
+  padding: 10px;
+}
+.pink_dropdowns {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-right: 140px;
+}
+.pink_button {
+  margin-top: 10px;
+  padding: 10px 40px;
+  background-color: #DC8386;
+  border: none;
+  border-radius: 8px;
+  font-family: "dance_partner_0";
+  font-size: 19px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.pink_button:hover {
+  background-color: #ae818f;
+}
+
+.inputs input,
+.dropdowns select,
+.dropdowns input[type=date] {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 80px;
+  font-family: "dance_partner_0";
+  font-size: 20px;
+  background-color: #EBEBEB;
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 100px 10px 0px 590px;
+}
+.footer_socials_link {
+  padding-left: 30px;
+}
+.footer_copyright {
+  font-family: "dance_partner_0";
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .footer__socials {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .footer__socials__link {
+    padding: 0 10px;
+    padding-top: 20px;
+  }
+  .footer_copyright {
+    align-self: flex-end;
+    padding-top: 20px;
+    width: 100%;
+    text-align: right;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    justify-content: flex-start;
+  }
+  .header_logo {
+    flex: 1;
+  }
+  .header_nav {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    position: absolute;
+    top: 75px;
+    left: 567px;
+  }
+  .header_nav_a,
+  .header_nav_a1 {
+    margin-top: 10px;
+    margin-right: 0;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .header_hamburger-menu {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .pink_text {
+    font-size: 20px;
+  }
+  .dropdowns {
+    margin-left: 30px;
+  }
+}/*# sourceMappingURL=only.css.map */

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <title>LaVienRose</title>
+    <link rel="stylesheet" href="tovar.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header_logo">
+            <a class="header_logo" href="index.html"><img class="header_logo_img" src="img/Логотип.png"> 
+        </div>
+        <div class="header_nav"  id="headerNav">
+          <a href="svadebniy.html" class="header_nav_a">Свадебные</a>
+          <a href="vecherni.html" class="header_nav_a1">Вечерние</a>
+          <a href="sale.html" class="header_nav_a">SALE!</a>
+          <a href="only.html" class="header_nav_a">Онлайн-запись</a>
+        </div>
+        <div class="header_account">
+          <a href="korzina.html" class="header_account_a">Моя примерочная</a>
+          <a class="header_icon" id="openRegistrationPopup"></a>
+        </div>
+        <div class="header_hamburger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="product_gallery">
+          <div class="product_gallery_thumbnails">
+            <img onclick="changeImage('img/товармини1.png')" src="img/товармини1.png">
+            <img onclick="changeImage('img/товар2.png')" src="img/товар2.png">
+            <img onclick="changeImage('img/товар3.png')" src="img/товар3.png">
+          </div>
+          <div class="product_image">
+            <img id="large-image" src="img/товар1.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="description">
+        <h2 class="description_name">Вечернее платье Arly</h2>
+        <p class="description_price">43 000,00₽</p>
+        <button class="description_button" data-product-id="1">Примерить</button>
+        <h3 class="description_title">Подробнее о платье</h3>
+        <p class="description_text">Мерцающее вечернее платье Arly с классическим лифом и V-образным вырезом из потрясающей изумрудной ткани - беспроигрышный вариант для любого вечера!</p>
+        <p class="description_text">Доступные оттенки: черный, красный, изумруд (на фото), серо-голубой, графит, светлый графит, пудра, золото, темное золото, перламутр.
+          Доступные размеры: 38-60.
+          Глиттер/ Блеск-хамелеон.
+          А-Силуэт, Прямое</p>
+      </div>
+
+      <div class="popup" id="registrationPopup" style="display:none;"> 
+        <span class="close" id="closePopup"></span>
+        <h2>Регистрация</h2>
+        <form action="register.php" method="post">
+            <div class="form-group">
+                <label for="login">Имя</label>
+                <input type="text" id="login" name="login" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Почта</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+                <i class="fas fa-eye show-password" id="showPassword"></i>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Подтверждение пароля</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <i class="fas fa-eye show-password" id="showConfirmPassword"></i>
+            </div>
+            <button type="submit" class="button">Регистрация</button>
+        </form>
+        <a id="switchToLogin" class="down">Есть аккаунт</a>
+      </div>
+    </div>
+
+    <div class="popup2" id="loginPopup" style="display:none;">
+      <span class="close2" id="closePopup"></span>
+      <h2>Войти</h2>
+      <form action="login.php" method="post">
+          <div class="form-group2">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group2">
+              <label for="password">Пароль</label>
+              <input type="password" id="password" name="password" required>
+              <i class="fas fa-eye show-password" id="showPassword"></i>
+          </div>
+          <div class="form-group2">
+              <label for="confirm-password">Подтверждение пароля</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
+              <i class="fas fa-eye show-password" id="showConfirmPassword"></i>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6LfYe_8pAAAAAJ10QBoczyzGIXqlfjLlE-DZvcpo"></div>
+          <button type="submit" class="button2">Войти</button>
+      </form>
+      <a id="switchToRegistration" class="down2">У меня нет аккаунта</a>
+    </div>
+    <script>
+      function onClick(e) {
+       e.preventDefault();
+       grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute(
+         '6LfYe_8pAAAAAJ10QBoczyzGIXqlfjLlE-DZvcpo',
+         { action: 'REGISTER' }
+        );
+        if (token) {
+         // если капча пройдена, то можно перейти на страницу регистрации
+         document.querySelector('#register-btn').disabled = false;
+        } else {
+         // если капча не пройдена, то кнопка регистрации недоступна
+         document.querySelector('#register-btn').disabled = true;
+        }
+       });
+      }
+     </script>
+  </div>
+
+      <footer class="footer">
+        <div class="footer_socials">
+            <a href="" class="footer_socials_link"><img src="img/вк.png"/></a>
+            <a href="" class="footer_socials_link"><img src="img/пинтерест.png"/></a>
+            <a href="" class="footer_socials_link"><img src="img/телеграмм.png"/></a>
+        </div>
+        <p class="footer_copyright">©LaVieenRose2024</p>
+    </footer>
+      
+      <script src="tovar.js"></script>
+</body>
+</html>      
